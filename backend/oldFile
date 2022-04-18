@@ -1,0 +1,67 @@
+const express = require('express');
+const app = express();
+
+const http = require('http');
+const server = http.createServer(app);
+const cors = require("cors");
+
+
+const { Server } = require("socket.io")(server, {
+	cors: {
+		origin: "*",
+		methods: [ "GET", "POST" ]
+	}
+});
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "admin",
+  password: "admin"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
+app.use(cors());
+
+const io = new Server(server);
+var old=[
+    { sender: 'John Doe', message: 'Hey there!', time: '6:01 PM' },
+
+
+  ]
+  var mesg3={};
+var i=0;
+io.on('connection', (socket) => {
+   i++;
+
+    console.log('a user connected :D'+i);
+    socket.on("chat",msg=>{
+
+
+
+   io.emit("send2",msg);
+
+   socket.emit("me", socket.id);
+
+	socket.on("disconnect", () => {
+		socket.broadcast.emit("callEnded")
+	});
+
+	socket.on("callUser", ({ userToCall, signalData, from, name }) => {
+		io.to(userToCall).emit("callUser", { signal: signalData, from, name });
+	});
+
+	socket.on("answerCall", (data) => {
+		io.to(data.to).emit("callAccepted", data.signal)
+	});
+
+    })
+
+  });
+  server.listen(3031, () => {
+    console.log('listening on *:3001');
+  });
