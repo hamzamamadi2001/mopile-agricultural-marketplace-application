@@ -16,8 +16,9 @@ chat and real time connection withe SOCKET IO
 #
 reating and commenting features.
 #
-![285998532_1061716248117287_4490469186198435486_n](https://user-images.githubusercontent.com/103936497/202580298-1668557d-a906-4ffd-807a-94a789c37d7d.jpg)
-![Capture](https://user-images.githubusercontent.com/103936497/202578474-09c3f150-c4c1-4e36-8ecb-3728b023d481.PNG)
+![chat](https://user-images.githubusercontent.com/103936497/202581095-db83c4b8-9666-4745-ac50-eb7c00dd6218.PNG)
+#
+ ![Capture](https://user-images.githubusercontent.com/103936497/202578474-09c3f150-c4c1-4e36-8ecb-3728b023d481.PNG)
 #
 ![Capture1](https://user-images.githubusercontent.com/103936497/202578536-df4eab02-5b2d-4df9-b8cb-710772bbe54c.PNG)
 #
