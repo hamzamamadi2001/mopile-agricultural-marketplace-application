@@ -2,8 +2,8 @@
 # mopile-agricultural-marketplace-application
 # Important :
 every one visit this repository I'm sorry for not organizing the repo because I was working quickly and in a beginner's way, but now I have the safer and organized version that will be uploaded soon...
-# the language of the application:
-the application support just Arabic language we can add muliple language very easy in next version :>
+# application's current language:
+the application support just Arabic language I can add muliple language very easy in next version :>
 # This is some photo of final products 
 by the way this is made by expo (React native) and it's working in ios also
 the backend system is also provided.
