@@ -1,3 +1,0 @@
-<Tab.Screen options={{headerShown:true}}  name="الدخول" component={Login} />
-<Tab.Screen options={{headerShown:true}} name="التسجيل" component={Register} />
-<Tab.Screen  name="Map"  component={Map} />
